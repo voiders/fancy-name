@@ -1,6 +1,10 @@
 language: node_js
 node_js:
 - '6.9.4'
+env:
+- NODE_ENV=test
+- PORT=9000
+- MONGODB_URI=mongodb://localhost:27017/fancy-name-test
 branches:
   only:
     - master
