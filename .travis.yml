@@ -7,4 +7,4 @@ branches:
 services:
   - mongodb
 script:
-  - yarn test
+  - yarn test:main
