@@ -20,13 +20,13 @@
   "scripts": {
     "server": "nodemon ./index.js",
     "webpack": "webpack-dev-server --open --inline",
-    "start": "env-cmd ./.env concurrently \"npm run webpack\" \"npm run server\"",
+    "start": "env-cmd ./.env concurrently \"yarn run webpack\" \"yarn run server\"",
     "lint": "eslint .",
-    "leasot": "leasot /home/a/Projects/fancy-name/src/server/api/__tests__/users.spec.js --reporter markdown >> TODO.md",
+    "leasot": "leasot '**/*.js' -i 'node_modules/**/*' -r markdown > TODO.md",
     "test:server": "tape ./src/**/__tests__/*.spec.js | tap-spec",
     "test:client": "echo karma start --single-run",
-    "test:main": "npm run lint && npm run test:server && npm run test:client",
-    "test": "env-cmd ./.env.test npm run test:main"
+    "test:main": "yarn run lint && yarn run test:server && yarn run test:client",
+    "test": "env-cmd ./.env.test yarn run test:main"
   },
   "babel": {
     "presets": [
