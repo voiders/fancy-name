@@ -14,5 +14,6 @@ config.MODULES_PATH = path.join(config.ROOT_PATH, 'node_modules')
 config.ASSETS_PATH = path.join(config.CLIENT_PATH, 'assets')
 config.TEMPLATE_PATH = path.join(config.CLIENT_PATH, 'templates')
 config.MAIN_TEMPLATE = path.join(config.TEMPLATE_PATH, 'production.pug')
+config.PUBLIC_PATH = path.join(config.ROOT_PATH, 'build', 'public')
 
 module.exports = config

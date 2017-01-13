@@ -18,6 +18,12 @@
     "supertest": "^2.0.1"
   },
   "scripts": {
+    "postbuild": "copy 'package.json' build",
+    "prebuild": "yarn run test && rimraf build && mkdir build",
+    "build:webpack": "webpack -p",
+    "build:server": "copy 'src/server/**/!(__tests__)/*.js' build/server",
+    "build:main": "yarn run build:server && yarn run build:webpack",
+    "build": "env-cmd ./.env.build yarn run build:main",
     "server": "nodemon ./index.js",
     "webpack": "webpack-dev-server --open --inline",
     "start": "env-cmd ./.env concurrently \"yarn run webpack\" \"yarn run server\"",
@@ -40,6 +46,7 @@
     "babel-preset-es2015": "^6.18.0",
     "babel-preset-react": "^6.16.0",
     "concurrently": "^3.1.0",
+    "copy": "^0.3.0",
     "css-loader": "^0.26.1",
     "eslint": "^3.13.0",
     "eslint-config-standard": "^6.2.1",
