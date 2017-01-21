@@ -10,23 +10,27 @@
     "cookie-parser": "^1.4.3",
     "env-cmd": "^4.0.0",
     "express": "^4.14.0",
+    "express-jwt": "^5.1.0",
     "express-session": "^1.14.2",
+    "jsonwebtoken": "^7.2.1",
+    "milligram-stylus": "^1.2.0",
     "mongoose": "^4.7.6",
+    "passport": "^0.3.2",
+    "passport-twitter": "^1.0.4",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
-    "redux": "^3.6.0",
-    "supertest": "^2.0.1"
+    "redux": "^3.6.0"
   },
   "scripts": {
     "server": "nodemon ./index.js",
     "webpack": "webpack-dev-server --open --inline",
-    "start": "env-cmd ./.env concurrently \"npm run webpack\" \"npm run server\"",
+    "start": "env-cmd ./.env concurrently \"yarn run webpack\" \"yarn run server\"",
     "lint": "eslint .",
     "leasot": "leasot /home/a/Projects/fancy-name/src/server/api/__tests__/users.spec.js --reporter markdown >> TODO.md",
     "test:server": "tape ./src/**/__tests__/*.spec.js | tap-spec",
     "test:client": "echo karma start --single-run",
-    "test:main": "npm run lint && npm run test:server && npm run test:client",
-    "test": "env-cmd ./.env.test npm run test:main"
+    "test:main": "yarn run lint && yarn run test:server && yarn run test:client",
+    "test": "env-cmd ./.env.test yarn run test:main"
   },
   "babel": {
     "presets": [
@@ -61,6 +65,7 @@
     "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.4.0",
+    "supertest": "^2.0.1",
     "tap-spec": "^4.1.1",
     "tape": "^4.6.3",
     "webpack": "^1.14.0",

@@ -15,4 +15,13 @@ config.ASSETS_PATH = path.join(config.CLIENT_PATH, 'assets')
 config.TEMPLATE_PATH = path.join(config.CLIENT_PATH, 'templates')
 config.MAIN_TEMPLATE = path.join(config.TEMPLATE_PATH, 'production.pug')
 
+config.auth = {
+  twitter: {
+    consumerKey: process.env.TWITTER_KEY,
+    consumerSecret: process.env.TWITTER_SECRET,
+    callbackURL: `http://localhost:${config.PORT}/api/auth/twitter/callback`,
+    includeEmail: true
+  }
+}
+
 module.exports = config

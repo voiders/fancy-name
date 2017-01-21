@@ -12,6 +12,10 @@ const schema = {
     type: String,
     unique: true
   },
+  twitterID: {
+    type: Number,
+    unique: true
+  },
   displayName: {
     type: String,
     required: true
@@ -28,6 +32,10 @@ const userSchema = new mongoose.Schema(schema)
 userSchema.statics.findOrCreate = function (conditions, data) {
   return this.findOne(conditions)
     .then(anonymous => anonymous || this.create(data))
+}
+
+userSchema.statics.findByTwitterID = function (twitterID) {
+  return this.findOne({twitterID})
 }
 
 module.exports = {

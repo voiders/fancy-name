@@ -24,5 +24,5 @@ module.exports = function (app) {
   // app.use(favicon(path.join(__dirname, '../../favicon.ico')))
   // app.use(express.static(config.PUBLIC_PATH))
   // app.use(express.static(config.FILES_PATH))
-  // require('./passport.js')(app)
+  require('./passport.js')(app)
 }
