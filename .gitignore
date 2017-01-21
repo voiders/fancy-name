@@ -1,6 +1,4 @@
-build/app.js
-build/style.css
-build/assets
+build
 public
 src/libs/gif/*.coffee
 .vscode
