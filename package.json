@@ -14,7 +14,7 @@
     "express-session": "^1.14.2",
     "jsonwebtoken": "^7.2.1",
     "milligram-stylus": "^1.2.0",
-    "mongoose": "^4.7.6",
+    "mongoose": "^5.7.5",
     "passport": "^0.3.2",
     "passport-twitter": "^1.0.4",
     "react": "^15.4.2",
