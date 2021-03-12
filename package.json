@@ -66,7 +66,7 @@
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-beta6",
     "pug-loader": "^2.3.0",
-    "react-dev-utils": "^0.4.2",
+    "react-dev-utils": "^11.0.4",
     "rimraf": "^2.5.4",
     "sinon": "^1.17.7",
     "style-loader": "^0.13.1",
