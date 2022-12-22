@@ -12,7 +12,7 @@
     "express": "^4.14.0",
     "express-jwt": "^5.1.0",
     "express-session": "^1.14.2",
-    "jsonwebtoken": "^7.2.1",
+    "jsonwebtoken": "^9.0.0",
     "milligram-stylus": "^1.2.0",
     "mongoose": "^4.7.6",
     "passport": "^0.3.2",
